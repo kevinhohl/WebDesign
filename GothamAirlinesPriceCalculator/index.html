@@ -1,0 +1,91 @@
+<!--
+Author: Kevin John Hohl
+Student Number: S0187382
+MMST 11002 - Assessment item 3: JavaScript Assignment
+-->
+
+<html>
+	<head>
+		<title>Gotham Airlines Fair Calculator</title>
+		<script>
+
+			function calculateFare() {
+
+				var route_cost;
+				var return_multiplier;
+				var seating_multiplier;
+				var flight_cost;
+
+				//check route radios
+				for (i=0; i < document.flightform.route.length; i++) {
+					if (document.flightform.route[i].checked) {
+						route_cost = parseInt(document.flightform.route[i].value);
+						break;
+					}
+				}//end for
+
+				if (route_cost == null) { //validate if a route is selected
+					alert("ERROR: Please Select the Route you wish to Travel!");
+				} else {
+
+					//check seating radios
+					for (i=0; i < document.flightform.seating.length; i++) {
+						if (document.flightform.seating[i].checked) {
+							seating_multiplier = parseFloat(document.flightform.seating[i].value);
+							break;
+						}
+					}//end for
+
+					if (seating_multiplier == null) { //validate if seating is selected
+							alert("ERROR: Please Select your prefered Seating Class!");
+					} else {
+
+						//check if return flight
+						if (document.flightform.return_check.checked) {
+							return_multiplier = parseInt(document.flightform.return_check.value);
+						} else {
+							return_multiplier = 1;
+						}//end return if-else
+
+						//calculate the total cost of the flight
+						flight_cost = route_cost * seating_multiplier * return_multiplier;
+						flight_cost = Math.round(flight_cost);
+						alert("The cost of the flight is $" + flight_cost);
+
+					}//end seating if-else
+				}//end route if-else
+
+			}//calculateFare()
+
+		</script>
+	</head>
+	<body>
+
+		<h1>Gotham Airlines Fare Calculator</h1>
+		<p>Complete the form below to calculate the cost of your flight.</p>
+
+		<form name="flightform">
+
+			<label>Route:</label><br>
+			<input type="radio" name="route" value="230">Gotham - Hill Valley<br>
+			<input type="radio" name="route" value="250">Gotham - Las Venturas<br>
+			<input type="radio" name="route" value="190">Gotham - Storybrooke<br>
+			<input type="radio" name="route" value="160">Gotham - Marlinshire<br>
+			<input type="radio" name="route" value="270">Gotham - Lillian<br>
+			<input type="radio" name="route" value="220">Gotham - Seahaven<br>
+
+			<p><label for="checkreturn">Click here if you will be purchasing a return fare: </label><input type="checkbox" id="checkreturn" name="return_check" value="2"></p>
+
+			<label>Seating:</label><br>
+			<input type="radio" name="seating" value="2">First Class<br>
+			<input type="radio" name="seating" value="1.5">Business Class<br>
+			<input type="radio" name="seating" value="1">Economy Class<br>
+
+			<br>
+			<input type="button" value="Calculate" onclick="calculateFare()">
+			<input type="reset">
+
+		</form>
+
+	</body>
+</html>

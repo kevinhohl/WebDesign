@@ -1,0 +1,147 @@
+
+/*
+ * reset margins and padding
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+   }
+
+/* 
+ * body and header 
+ */ 
+body {
+	background-color:white;
+	margin: auto;
+	width: 720px;
+	font: 14px/20px Calibri;
+	top-padding: 20px
+	}
+	
+h1 {
+	font-size: 53px;
+	padding: 0px 0;
+	text-shadow: 2px 2px 2px Black;
+	color: Green;
+	line-height: 90%;
+	letter-spacing:8px;
+	top-padding: 15px;
+	}
+
+h2 {
+	font-size: 24px;
+	padding: 20px 0;
+	}
+
+h3 {
+	font-size: 18px;
+	padding: 10px 0;
+	}
+
+
+
+/* 
+ * banner area
+ */ 
+
+#banner {
+	position: relative;
+	padding: 80px;
+	margin-top: 10px;	
+	//-moz-border-radius: 10px;
+	//-webkit-border-radius: 10px;
+	}
+	
+#banner img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 730px;
+	height: 100%;
+	//-moz-border-radius: 10px;
+	//-webkit-border-radius: 10px; 
+	
+	}
+/* 
+ * body and content
+ */
+#content {
+	background-color: #006600;
+	position: relative;
+	margin:10px 5px 10px 0; 
+	padding:5px 20px 5px 20px;
+	float: left; 
+	width: 690px; 	
+	//-moz-border-radius: 10px;
+	//-webkit-border-radius: 10px;
+}
+
+#content ul.column {
+	width: 100%;
+	padding: 10;
+	margin: 10px 10px;
+	margin-bottom: 20px;
+	align: left;
+}
+
+#content ul.column li {
+	float: left;
+	width: 340px;
+	padding: 0;
+	margin: 5px 0;
+	display: inline;
+}
+
+#content .block {
+	background: Green;	
+	height: 310px;
+	font-size: 1em;
+	margin-right: 10px;
+	padding: 20px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#content .block p {
+	color: White;
+	}
+	
+#content .block img {
+	background:black;
+	width: 95%;  
+	padding: 5px;
+	max-height: 180px;
+	}
+
+	
+#content footer {
+	background-color:transparent;
+	width: auto;
+	height: auto;
+	text-align:right;
+	}
+	
+footer {
+	background-color: #002800;	
+	width: 730px;
+	clear: both;
+	color: white;
+	padding-top: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;	
+	height: 150px;
+	margin-bottom: 10px;
+	}
+	
+footer section {
+	width: 220px;
+	float: left;
+	padding: 0 10px;
+	}
+
+footer section p {
+  	font-size: 12px;
+	}
+
+

@@ -1,0 +1,1 @@
+A simple price calculator embeded in the webpage via JavaScript
